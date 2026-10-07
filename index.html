@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Miroshke — официальный русский голос Верити (Verity) · актёр дубляжа</title>
+<meta name="description" content="Miroshke (Мирошке) — актёр дубляжа и озвучки, официальный русский голос Верити из сериала VERITY™ от ThatMob, участник команды AniCore. Демо, услуги и контакты.">
+<meta name="theme-color" content="#0d0a14">
+<meta property="og:type" content="profile">
+<meta property="og:title" content="Miroshke — официальный русский голос Верити (Verity)">
+<meta property="og:description" content="Актёр дубляжа и озвучки, команда AniCore. Работы, услуги и контакты.">
+<meta property="og:url" content="">
+<meta property="og:image" content="">
+<link rel="icon" href="favicon.png" type="image/png">
+<link rel="apple-touch-icon" href="favicon.png">
+<style>
+  :root {
+    --bg: #0d0a14;
+    --card: rgba(26, 20, 38, .72);
+    --card-2: rgba(255, 255, 255, .04);
+    --stroke: rgba(255, 255, 255, .10);
+    --text: #f0edf7;
+    --muted: #a49cb8;
+    --accent: #b98cff;
+    --accent-2: #ff7ac2;
+    --ok: #35d07f;
+    --radius: 22px;
+    --font: "Inter", "Segoe UI", system-ui, -apple-system, "Helvetica Neue", Arial, sans-serif;
+  }
+
+  * { box-sizing: border-box; }
+  html, body { min-height: 100%; }
+
+  body {
+    margin: 0;
+    padding: 26px 16px 34px;
+    font-family: var(--font);
+    color: var(--text);
+    background: var(--bg);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  body::before, body::after {
+    content: ""; position: fixed; z-index: -1;
+    border-radius: 50%; filter: blur(95px); opacity: .34; pointer-events: none;
+  }
+  body::before { width: 430px; height: 430px; background: var(--accent); top: -150px; left: -120px; }
+  body::after  { width: 470px; height: 470px; background: var(--accent-2); bottom: -190px; right: -140px; }
+
+  .wrap { width: 100%; max-width: 620px; display: flex; flex-direction: column; gap: 16px; }
+
+  .card {
+    background: var(--card);
+    border: 1px solid var(--stroke);
+    border-radius: var(--radius);
+    padding: 26px 24px;
+    backdrop-filter: blur(14px);
+    box-shadow: 0 22px 60px rgba(0, 0, 0, .42);
+  }
+
+  .head { display: flex; align-items: center; gap: 16px; flex-wrap: wrap; }
+
+  .avatar {
+    flex: 0 0 auto; width: 84px; height: 84px; border-radius: 50%;
+    display: grid; place-items: center; overflow: hidden;
+    font-size: 32px; font-weight: 700; color: #fff;
+    background: linear-gradient(135deg, var(--accent), var(--accent-2));
+    box-shadow: 0 12px 30px rgba(185, 140, 255, .35);
+    user-select: none;
+  }
+  .avatar img { width: 100%; height: 100%; object-fit: cover; display: block; }
+
+  h1 { margin: 0 0 4px; font-size: 27px; line-height: 1.15; letter-spacing: -.2px; }
+  .handle { margin: 0; color: var(--muted); font-size: 15px; }
+  .status { display: inline-flex; align-items: center; gap: 7px; margin-top: 9px; font-size: 13px; color: var(--muted); }
+  .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--ok); box-shadow: 0 0 0 3px rgba(53,208,127,.16); }
+
+  .badge {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 6px 12px;
+    font-size: 12.5px;
+    line-height: 1.45;
+    color: #f3e9ff;
+    background: linear-gradient(135deg, rgba(185,140,255,.22), rgba(255,122,194,.18));
+    border: 1px solid rgba(185,140,255,.45);
+    border-radius: 999px;
+  }
+
+  .lead { margin: 20px 0 0; color: #d6d1e4; font-size: 15.5px; line-height: 1.62; }
+  .lead b { color: #fff; font-weight: 600; }
+
+  .cta { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 20px; }
+
+  .btn {
+    display: inline-flex; align-items: center; justify-content: center; gap: 9px;
+    font: inherit; font-size: 15px; font-weight: 600;
+    padding: 13px 20px; border-radius: 13px;
+    border: 1px solid var(--stroke); background: var(--card-2); color: var(--text);
+    text-decoration: none; cursor: pointer;
+    transition: transform .14s ease, filter .14s ease;
+  }
+  .btn:hover, .btn:focus-visible { transform: translateY(-2px); filter: brightness(1.1); outline: none; }
+  .btn:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+  .btn.primary { background: linear-gradient(135deg, var(--accent), var(--accent-2)); border-color: transparent; color: #1a0f24; }
+
+  h2 {
+    margin: 0 0 14px; font-size: 13px; text-transform: uppercase;
+    letter-spacing: .10em; color: var(--muted); font-weight: 600;
+  }
+
+  .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 10px; }
+  .item { background: var(--card-2); border: 1px solid var(--stroke); border-radius: 15px; padding: 14px 15px; }
+  .item .ic { font-size: 19px; line-height: 1; }
+  .item strong { display: block; margin: 9px 0 4px; font-size: 15px; }
+  .item span { color: var(--muted); font-size: 13.5px; line-height: 1.5; }
+
+  .works { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 9px; }
+  .work {
+    display: flex; align-items: baseline; gap: 10px; padding: 11px 14px;
+    background: var(--card-2); border: 1px solid var(--stroke);
+    border-radius: 13px; font-size: 14.5px;
+  }
+  .work .role { margin-left: auto; color: var(--muted); font-size: 13px; white-space: nowrap; }
+
+  .demo {
+    display: flex; align-items: flex-start; gap: 14px;
+    background: var(--card-2); border: 1px solid var(--stroke);
+    border-radius: 16px; padding: 14px 16px;
+  }
+  .demo .play {
+    flex: 0 0 auto; width: 46px; height: 46px; border-radius: 50%;
+    border: none; cursor: pointer; display: grid; place-items: center;
+    background: linear-gradient(135deg, var(--accent), var(--accent-2));
+    color: #1a0f24; font-size: 17px;
+  }
+  .demo .body { min-width: 0; flex: 1; }
+  .demo .body strong { display: block; font-size: 15px; }
+  .demo .body .note { color: var(--muted); font-size: 13px; }
+  .files { display: none; margin-top: 6px; }
+  .demo.open .files { display: block; }
+  .files p { margin: 12px 0 5px; color: var(--muted); font-size: 13px; }
+  .files audio { width: 100%; }
+
+  .specs { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 10px; }
+  .spec { background: var(--card-2); border: 1px solid var(--stroke); border-radius: 14px; padding: 12px 14px; }
+  .spec span { display: block; color: var(--muted); font-size: 12.5px; margin-bottom: 5px; }
+  .spec strong { font-size: 14.5px; font-weight: 600; }
+
+  .links { display: flex; flex-direction: column; gap: 9px; }
+  .link {
+    display: flex; align-items: center; gap: 13px; padding: 13px 15px;
+    border-radius: 14px; text-decoration: none; color: var(--text);
+    background: var(--card-2); border: 1px solid var(--stroke);
+    transition: transform .14s ease, background .14s ease, border-color .14s ease;
+  }
+  .link:hover, .link:focus-visible {
+    transform: translateY(-2px); background: rgba(185, 140, 255, .13);
+    border-color: rgba(185, 140, 255, .45); outline: none;
+  }
+  .link svg { flex: 0 0 auto; width: 21px; height: 21px; }
+  .link .t { display: flex; flex-direction: column; gap: 2px; min-width: 0; }
+  .link .t strong { font-size: 15px; font-weight: 600; }
+  .link .t span { font-size: 13px; color: var(--muted); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  .link .arrow { margin-left: auto; color: var(--muted); font-size: 18px; }
+
+  footer { text-align: center; color: #6f6784; font-size: 12.5px; line-height: 1.7; }
+  #previewBadge {
+    display: none; position: fixed; top: 10px; left: 50%; transform: translateX(-50%);
+    background: var(--accent); color: #1a0f24; font-size: 12px; font-weight: 700;
+    padding: 6px 14px; border-radius: 999px; z-index: 9;
+  }
+
+  @media (max-width: 420px) {
+    .card { padding: 21px 17px; }
+    .avatar { width: 68px; height: 68px; font-size: 26px; }
+    h1 { font-size: 23px; }
+    .btn { flex: 1 1 100%; }
+    .work { flex-wrap: wrap; }
+    .work .role { margin-left: 0; }
+  }
+  @media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
+</style>
+</head>
+<body>
+
+<div id="previewBadge">Предпросмотр</div>
+<div class="wrap" id="app">
+  <!-- Это заглушка: она видна только если страница открыта без скриптов или в предпросмотре.
+       Как только сайт загружается нормально, она заменяется настоящим содержимым. -->
+  <div class="card">
+    <div class="head">
+      <div class="avatar" aria-hidden="true">M</div>
+      <div>
+        <h1>Miroshke</h1>
+        <p class="handle">Мирошке · актёр дубляжа и озвучки</p>
+      </div>
+    </div>
+    <p class="lead">
+      Если вы видите это сообщение вместо сайта — страница открыта в режиме предпросмотра, где скрипты отключены.
+      Скачайте файлы <b>index.html</b> и <b>content.js</b> в одну папку и откройте <b>index.html</b> двойным кликом
+      в браузере (Chrome, Edge, Яндекс) — появится полная версия с демо и ссылками.
+    </p>
+  </div>
+</div>
+
+<!-- Содержимое сайта. Этот файл меняет админка (admin.html) -->
+<script src="content.js"></script>
+
+<script>
+/* ---------- Значения по умолчанию: если в content.js чего-то нет, сайт не сломается ---------- */
+var DEFAULTS = {
+  theme: { accent: "#b98cff", accent2: "#ff7ac2" },
+  seo: { title: "Моя страница", description: "", previewImage: "" },
+  header: { name: "", subtitle: "", status: "", badge: "", avatarText: "?", avatarImage: "", lead: "", buttons: [] },
+  demo: { title: "Демо", note: "", button: null, tracks: [] },
+  services: { title: "Услуги", items: [] },
+  projects: { title: "Проекты", items: [] },
+  specs: { title: "О себе", items: [] },
+  links: { title: "Ссылки", email: "", items: [] },
+  footer: { line1: "", line2: "" }
+};
+
+function isObj(v) { return v && typeof v === "object" && !Array.isArray(v); }
+function merge(base, over) {
+  var out = Array.isArray(base) ? base.slice() : Object.assign({}, base);
+  if (!isObj(over)) return out;
+  Object.keys(over).forEach(function (k) {
+    if (isObj(base[k]) && isObj(over[k])) out[k] = merge(base[k], over[k]);
+    else if (over[k] !== undefined && over[k] !== null) out[k] = over[k];
+  });
+  return out;
+}
+
+/* ---------- Иконки для ссылок ---------- */
+var ICONS = {
+  telegram: '<path d="M21.9 4.3 18.9 19c-.2 1-.8 1.3-1.7.8l-4.6-3.4-2.2 2.1c-.2.2-.4.4-.9.4l.3-4.7 8.5-7.7c.4-.3-.1-.5-.6-.2L7.2 13.1 2.7 11.7c-1-.3-1-1 .2-1.4l17.3-6.7c.8-.3 1.5.2 1.2 1.1z" fill="#b98cff"/>',
+  youtube: '<path d="M23 12s0-3.5-.4-5.2a2.8 2.8 0 0 0-2-2C18.9 4.4 12 4.4 12 4.4s-6.9 0-8.6.4a2.8 2.8 0 0 0-2 2C1 8.5 1 12 1 12s0 3.5.4 5.2c.2 1 1 1.8 2 2 1.7.4 8.6.4 8.6.4s6.9 0 8.6-.4c1-.2 1.8-1 2-2 .4-1.7.4-5.2.4-5.2zM9.8 15.3V8.7l5.7 3.3-5.7 3.3z" fill="#ff5a5a"/>',
+  tiktok: '<path d="M16.6 5.8a4.3 4.3 0 0 1-1-2.8h-3v12.1a2.5 2.5 0 1 1-1.8-2.4V9.6a5.6 5.6 0 1 0 4.8 5.5V8.9a7.2 7.2 0 0 0 4 1.2V7.1a4.3 4.3 0 0 1-3-1.3z" fill="#7de3ff"/>',
+  vk: '<path d="M12.8 17.3c-6 0-9.5-4.2-9.6-11.1h3c.1 5 2.4 7.2 4.1 7.7V6.2h2.9v4.3c1.7-.2 3.4-2.1 4-4.3h2.9c-.5 2.6-2.4 4.5-3.7 5.3 1.3.6 3.5 2.3 4.3 5.8h-3.2c-.6-1.9-2.1-3.4-4.3-3.6v3.6h-.4z" fill="#5b8cff"/>',
+  discord: '<path d="M19.3 5.4A16 16 0 0 0 15.4 4l-.3.6a12 12 0 0 1 3.4 1.7 11.4 11.4 0 0 0-9-.4l-.5.4A12 12 0 0 1 8.9 4.6L8.6 4a16 16 0 0 0-4 1.4C2 9.6 1.4 13.7 1.7 17.7A16 16 0 0 0 6.5 20l.7-1.1c-.9-.3-1.7-.8-2.4-1.3l.6-.4a11.4 11.4 0 0 0 9.8 0l.6.4c-.7.5-1.5 1-2.4 1.3l.7 1.1a16 16 0 0 0 4.8-2.3c.4-4.6-.6-8.6-2-12zM8.9 15.3c-1 0-1.7-.9-1.7-1.9s.8-1.9 1.7-1.9 1.8.9 1.7 1.9c0 1-.8 1.9-1.7 1.9zm6.2 0c-1 0-1.7-.9-1.7-1.9s.8-1.9 1.7-1.9 1.8.9 1.7 1.9c0 1-.7 1.9-1.7 1.9z" fill="#8ea1ff"/>',
+  instagram: '<path d="M12 2.2c3.2 0 3.6 0 4.9.1 3.3.1 4.8 1.7 4.9 4.9.1 1.3.1 1.6.1 4.8s0 3.6-.1 4.9c-.1 3.2-1.6 4.8-4.9 4.9-1.3.1-1.6.1-4.9.1s-3.6 0-4.9-.1c-3.3-.1-4.8-1.7-4.9-4.9C2.2 15.6 2.2 15.2 2.2 12s0-3.6.1-4.9C2.4 3.9 3.9 2.3 7.1 2.3c1.3 0 1.7-.1 4.9-.1zm0 5.1a4.7 4.7 0 1 0 0 9.4 4.7 4.7 0 0 0 0-9.4zm0 7.7a3 3 0 1 1 0-6 3 3 0 0 1 0 6zm6-7.9a1.1 1.1 0 1 1-2.2 0 1.1 1.1 0 0 1 2.2 0z" fill="#ff8ac2"/>',
+  whatsapp: '<path d="M12 2a10 10 0 0 0-8.6 15L2 22l5.2-1.4A10 10 0 1 0 12 2zm5.2 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .1-1.7-.1-1.4-.5-3-1.9-4-3.6-.4-.8-.7-1.6-.6-2.2.1-.6.6-1.4 1-1.6.3-.2.8-.1 1 .3l.6 1.2c.1.3 0 .5-.2.7l-.5.5c.4 1 1.3 1.9 2.3 2.3l.5-.5c.2-.2.5-.3.7-.2l1.2.6c.4.2.5.6.4.9z" fill="#6ee7a8"/>',
+  boosty: '<path d="M4 4h9a6 6 0 0 1 0 12H8v4H4V4zm4 4v4h4a2 2 0 0 0 0-4H8z" fill="#ff9a4d"/>',
+  steam: '<path d="M7 8h10a4 4 0 0 1 4 4v2a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4v-2a4 4 0 0 1 4-4zm1.2 2.2v1.6H6.6v1.4h1.6v1.6h1.4v-1.6h1.6v-1.4H9.6v-1.6H8.2zm7.3.3a1.1 1.1 0 1 0 0 2.2 1.1 1.1 0 0 0 0-2.2zm2 2.6a1.1 1.1 0 1 0 0 2.2 1.1 1.1 0 0 0 0-2.2z" fill="#9fb6d4"/>',
+  web: '<path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm6.9 6h-2.6a15 15 0 0 0-1.3-3.4A8 8 0 0 1 18.9 8zM12 4.1c.7 1 1.3 2.3 1.7 3.9h-3.4c.4-1.6 1-2.9 1.7-3.9zM4.3 14a8 8 0 0 1 0-4h3a17 17 0 0 0 0 4h-3zm.8 2h2.6c.3 1.2.8 2.4 1.3 3.4A8 8 0 0 1 5.1 16zm2.6-8H5.1a8 8 0 0 1 3.9-3.4A15 15 0 0 0 7.7 8zM12 19.9c-.7-1-1.3-2.3-1.7-3.9h3.4c-.4 1.6-1 2.9-1.7 3.9zM14.1 14H9.9a15 15 0 0 1 0-4h4.2a15 15 0 0 1 0 4zm.9 5.4c.5-1 1-2.2 1.3-3.4h2.6a8 8 0 0 1-3.9 3.4zM16.7 14a17 17 0 0 0 0-4h3a8 8 0 0 1 0 4h-3z" fill="#8fd0ff"/>',
+  article: '<path d="M6 2h8l4 4v16H6V2zm7 1.5V7h3.5L13 3.5zM8 10h8v1.6H8V10zm0 3h8v1.6H8V13zm0 3h5v1.6H8V16z" fill="#c9c2dd"/>',
+  email: '<path d="M3 5h18a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1zm9 8.2L4.4 7h15.2L12 13.2zM4 8.6V17h16V8.6l-7.5 6a1 1 0 0 1-1.2 0L4 8.6z" fill="#8ad0a8"/>',
+  custom: '<path d="M10.6 13.4a1 1 0 0 1 0-1.4l1.4-1.4a1 1 0 0 1 1.4 1.4l-1.4 1.4a1 1 0 0 1-1.4 0zM7.8 16.2a4 4 0 0 1 0-5.6l2.8-2.8a4 4 0 0 1 5.6 5.6l-1.4 1.4-1.4-1.4 1.4-1.4a2 2 0 0 0-2.8-2.8l-2.8 2.8a2 2 0 0 0 2.8 2.8l1.4 1.4a4 4 0 0 1-5.6 0z" fill="#c9c2dd"/>'
+};
+
+function iconFor(type) {
+  var path = ICONS[type] || ICONS.custom;
+  var svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+  svg.setAttribute("viewBox", "0 0 24 24");
+  svg.setAttribute("aria-hidden", "true");
+  svg.innerHTML = path;
+  return svg;
+}
+
+/* ---------- Помощник для создания элементов ---------- */
+function el(tag, props, kids) {
+  var n = document.createElement(tag);
+  if (props) Object.keys(props).forEach(function (k) {
+    var v = props[k];
+    if (v === null || v === undefined || v === false) return;
+    if (k === "class") n.className = v;
+    else if (k === "text") n.textContent = v;
+    else if (k === "href") n.setAttribute("href", v);
+    else if (k.slice(0, 2) === "on" && typeof v === "function") n.addEventListener(k.slice(2).toLowerCase(), v);
+    else n.setAttribute(k, v);
+  });
+  (kids || []).forEach(function (c) {
+    if (c === null || c === undefined || c === false) return;
+    n.append(typeof c === "object" ? c : document.createTextNode(String(c)));
+  });
+  return n;
+}
+
+function list(arr) { return Array.isArray(arr) ? arr : []; }
+function safeUrl(u) { u = String(u || "").trim(); return u; }
+
+/* ---------- Отрисовка сайта ---------- */
+function render(raw) {
+  var C = merge(DEFAULTS, raw || {});
+
+  /* цвета и заголовок вкладки */
+  document.documentElement.style.setProperty("--accent", C.theme.accent);
+  document.documentElement.style.setProperty("--accent-2", C.theme.accent2);
+  if (C.seo.title) document.title = C.seo.title;
+  if (C.seo.description) {
+    var d = document.querySelector('meta[name="description"]');
+    if (d) d.setAttribute("content", C.seo.description);
+  }
+  var ogTitle = document.querySelector('meta[property="og:title"]');
+  if (ogTitle && C.seo.title) ogTitle.setAttribute("content", C.seo.title);
+  var ogDesc = document.querySelector('meta[property="og:description"]');
+  if (ogDesc && C.seo.description) ogDesc.setAttribute("content", C.seo.description);
+  if (C.seo.previewImage) {
+    var ogImg = document.querySelector('meta[property="og:image"]');
+    if (ogImg) ogImg.setAttribute("content", C.seo.previewImage);
+  }
+  if (/^https?:/.test(location.protocol)) {
+    var ogUrl = document.querySelector('meta[property="og:url"]');
+    if (ogUrl) ogUrl.setAttribute("content", location.href);
+  }
+
+  var app = document.getElementById("app");
+  app.textContent = "";
+
+  /* --- Шапка --- */
+  var avatar;
+  if (C.header.avatarImage) {
+    avatar = el("div", { class: "avatar" }, [el("img", { src: C.header.avatarImage, alt: "" })]);
+  } else {
+    avatar = el("div", { class: "avatar", "aria-hidden": "true", text: C.header.avatarText || "?" });
+  }
+
+  var headInfo = el("div", null, [
+    el("h1", { text: C.header.name || "" }),
+    C.header.subtitle ? el("p", { class: "handle", text: C.header.subtitle }) : null,
+    C.header.badge ? el("div", { class: "badge", text: C.header.badge }) : null,
+    C.header.status ? el("div", { class: "status" }, [el("span", { class: "dot", "aria-hidden": "true" }), C.header.status]) : null
+  ]);
+
+  var headerCard = el("main", { class: "card" }, [
+    el("div", { class: "head" }, [avatar, headInfo])
+  ]);
+
+  if (C.header.lead) {
+    headerCard.append(el("p", { class: "lead" }, [C.header.lead]));
+  }
+
+  var buttons = list(C.header.buttons).filter(function (b) { return b && b.label && b.url; });
+  if (buttons.length) {
+    headerCard.append(el("div", { class: "cta" }, buttons.map(function (b) {
+      var isAnchor = safeUrl(b.url).charAt(0) === "#";
+      return el("a", {
+        class: "btn" + (b.primary ? " primary" : ""),
+        href: safeUrl(b.url),
+        target: isAnchor ? null : "_blank",
+        rel: isAnchor ? null : "noopener",
+        text: b.label
+      });
+    })));
+  }
+  app.append(headerCard);
+
+  /* --- Демо --- */
+  var tracks = list(C.demo.tracks).filter(function (t) { return t && t.file; });
+  if (tracks.length || C.demo.note) {
+    var files = el("div", { class: "files" }, tracks.map(function (t) {
+      return el("div", null, [
+        el("p", { text: t.name || t.file }),
+        el("audio", { controls: "", preload: "none", src: t.file })
+      ]);
+    }));
+
+    var demoBtn = null;
+    if (C.demo.button && C.demo.button.url && C.demo.button.label) {
+      demoBtn = el("div", { class: "cta", style: "margin-top:12px" }, [
+        el("a", {
+          class: "btn primary", href: safeUrl(C.demo.button.url),
+          target: "_blank", rel: "noopener", text: C.demo.button.label
+        })
+      ]);
+    }
+
+    var demoBox = el("div", { class: "demo" }, [
+      el("button", { class: "play", type: "button", "aria-label": "Показать плеер", text: "▶" }),
+      el("div", { class: "body" }, [
+        el("strong", { text: tracks.length ? "Показать примеры голоса" : "Где послушать работы" }),
+        C.demo.note ? el("div", { class: "note", text: C.demo.note }) : null,
+        demoBtn,
+        tracks.length ? files : null
+      ])
+    ]);
+
+    if (tracks.length) {
+      var playBtn = demoBox.querySelector(".play");
+      playBtn.addEventListener("click", function () {
+        var open = demoBox.classList.toggle("open");
+        playBtn.textContent = open ? "—" : "▶";
+        playBtn.setAttribute("aria-label", open ? "Скрыть плеер" : "Показать плеер");
+      });
+    } else {
+      demoBox.querySelector(".play").style.display = "none";
+    }
+
+    app.append(el("section", { class: "card", id: "demo" }, [
+      el("h2", { text: C.demo.title || "Демо" }),
+      demoBox
+    ]));
+  }
+
+  /* --- Услуги --- */
+  var services = list(C.services.items).filter(function (s) { return s && (s.title || s.text); });
+  if (services.length) {
+    app.append(el("section", { class: "card" }, [
+      el("h2", { text: C.services.title || "Услуги" }),
+      el("div", { class: "grid" }, services.map(function (s) {
+        return el("div", { class: "item" }, [
+          s.icon ? el("div", { class: "ic", text: s.icon }) : null,
+          el("strong", { text: s.title || "" }),
+          s.text ? el("span", { text: s.text }) : null
+        ]);
+      }))
+    ]));
+  }
+
+  /* --- Проекты --- */
+  var projects = list(C.projects.items).filter(function (p) { return p && p.title; });
+  if (projects.length) {
+    app.append(el("section", { class: "card" }, [
+      el("h2", { text: C.projects.title || "Проекты" }),
+      el("ul", { class: "works" }, projects.map(function (p) {
+        return el("li", { class: "work" }, [
+          el("span", { text: p.title }),
+          p.role ? el("span", { class: "role", text: p.role }) : null
+        ]);
+      }))
+    ]));
+  }
+
+  /* --- Характеристики --- */
+  var specs = list(C.specs.items).filter(function (s) { return s && (s.label || s.value); });
+  if (specs.length) {
+    app.append(el("section", { class: "card" }, [
+      el("h2", { text: C.specs.title || "О себе" }),
+      el("div", { class: "specs" }, specs.map(function (s) {
+        return el("div", { class: "spec" }, [
+          el("span", { text: s.label || "" }),
+          el("strong", { text: s.value || "" })
+        ]);
+      }))
+    ]));
+  }
+
+  /* --- Ссылки --- */
+  var links = list(C.links.items).filter(function (l) { return l && l.url && l.title; });
+  var email = String(C.links.email || "").trim();
+  if (links.length || email) {
+    var nav = el("nav", { class: "links", "aria-label": "Ссылки" }, links.map(function (l) {
+      return el("a", { class: "link", href: safeUrl(l.url), target: "_blank", rel: "noopener" }, [
+        iconFor(l.type),
+        el("span", { class: "t" }, [
+          el("strong", { text: l.title }),
+          l.subtitle ? el("span", { text: l.subtitle }) : null
+        ]),
+        el("span", { class: "arrow", text: "↗" })
+      ]);
+    }));
+
+    var linkCard = el("section", { class: "card" }, [el("h2", { text: C.links.title || "Ссылки" }), nav]);
+
+    if (email) {
+      linkCard.append(el("div", { class: "cta" }, [
+        el("a", { class: "link", style: "flex:0 0 auto;padding:11px 16px", href: "mailto:" + email }, [
+          iconFor("email"),
+          el("span", { class: "t" }, [el("strong", { text: "Написать на почту" }), el("span", { text: email })])
+        ]),
+        el("button", {
+          class: "btn", type: "button", "data-copy": email, text: "Скопировать почту",
+          onclick: function (e) {
+            var b = e.currentTarget, old = b.textContent;
+            var done = function () { b.textContent = "Скопировано ✓"; setTimeout(function () { b.textContent = old; }, 1600); };
+            if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(email).then(done, done);
+            else done();
+          }
+        })
+      ]));
+    }
+
+    app.append(linkCard);
+  }
+
+  /* --- Подвал --- */
+  if (C.footer.line1 || C.footer.line2) {
+    app.append(el("footer", null, [
+      C.footer.line1 ? el("div", { text: C.footer.line1 }) : null,
+      C.footer.line2 ? el("div", { text: C.footer.line2 }) : null
+    ]));
+  }
+}
+
+/* ---------- Первый запуск: берём содержимое из content.js ---------- */
+render(window.SITE_CONTENT || {});
+
+/* ---------- Режим предпросмотра из админки ---------- */
+if (/[?&]preview=1/.test(location.search)) {
+  document.getElementById("previewBadge").style.display = "block";
+  try {
+    var saved = localStorage.getItem("bio-preview");
+    if (saved) render(JSON.parse(saved));
+  } catch (e) {}
+}
+
+window.addEventListener("message", function (e) {
+  var d = e.data;
+  if (d && d.type === "bio-preview" && d.content) render(d.content);
+});
+</script>
+</body>
+</html>
