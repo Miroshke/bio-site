@@ -1,23 +1,23 @@
-/* Содержимое сайта. Файл создан админкой 07.10.2026, 22:04:30 */
+/* Содержимое сайта. Файл создан админкой 07.10.2026, 22:21:59 */
 window.SITE_CONTENT = {
-  "updated": "2026-10-07T15:04:30.006Z",
+  "updated": "2026-10-07T15:21:59.615Z",
   "theme": {
     "accent": "#b98cff",
     "accent2": "#ff7ac2"
   },
   "seo": {
-    "title": "Miroshke — официальный русский голос Верити (Verity) · актёр дубляжа",
-    "description": "Miroshke (Мирошке) — актёр дубляжа и озвучки, официальный русский голос Верити из сериала VERITY™ от ThatMob, участник команды AniCore. Демо, услуги и контакты.",
+    "title": "Мирошке(Miroshke) — официальный русский голос Верити (Verity) · актёр дубляжа",
+    "description": "Мирошке (Miroshke) — актёр дубляжа и озвучки, официальный русский голос Верити из сериала VERITY™ от ThatMob, участник команды AniCore. Демо, услуги и контакты.",
     "previewImage": "https://miroshke.github.io/bio-site/avatar.jpg"
   },
   "header": {
-    "name": "Miroshke",
-    "subtitle": "Мирошке · актёр дубляжа и озвучки",
+    "name": "Мирошке",
+    "subtitle": "Miroshke · актёр дубляжа и озвучки",
     "status": "свободен для новых проектов",
     "badge": "🎙 Официальный русский актёр озвучки Verity · команда AniCore",
     "avatarText": "M",
     "avatarImage": "avatar.jpg",
-    "lead": "Меня зовут Miroshke, я актёр дубляжа и озвучки. Я актёр озвучки — Верити из хоррор-сериала VERITY™ по Minecraft от ThatMob: я озвучил его в официальном русском дубляже команды AniCore, который вышел одновременно с оригиналом. Кроме дубляжа записываю рекламу, персонажей игр, аудиокниги и видео — подберу интонацию под задачу, запишу чистый звук и отдам готовый файл в любом формате.",
+    "lead": "Меня зовут Мирошке, я актёр дубляжа и озвучки. Я актёр озвучки — Верити из хоррор-сериала VERITY™ по Minecraft от ThatMob: я озвучил его в официальном русском дубляже команды AniCore, который вышел одновременно с оригиналом. Кроме дубляжа записываю рекламу, персонажей игр, аудиокниги и видео — подберу интонацию под задачу, запишу чистый звук и отдам готовый файл в любом формате.",
     "buttons": [
       {
         "label": "▶ Слушать работы",
@@ -136,6 +136,12 @@ window.SITE_CONTENT = {
         "url": "https://steamcommunity.com/id/sssakuta"
       },
       {
+        "type": "youtube",
+        "title": "Сериал VERITY™ на YouTube",
+        "subtitle": "канал автора ThatMob — там вышел и русский дубляж",
+        "url": "https://www.youtube.com/@ThatMob"
+      },
+      {
         "type": "telegram",
         "title": "AniCore News",
         "subtitle": "новости команды дубляжа",
@@ -146,6 +152,12 @@ window.SITE_CONTENT = {
         "title": "AniCore на вики «Верити»",
         "subtitle": "подтверждение роли: Верити озвучил Miroshke",
         "url": "https://verityminecraft.fandom.com/ru/wiki/AniCore"
+      },
+      {
+        "type": "web",
+        "title": "AniCore на вики фандабов",
+        "subtitle": "о команде и её проектах",
+        "url": "https://fandub.wiki/index.php?title=AniCore"
       },
       {
         "type": "article",
