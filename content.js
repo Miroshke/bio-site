@@ -1,6 +1,6 @@
-/* Содержимое сайта. Файл создан админкой 07.10.2026, 22:21:59 */
+/* Содержимое сайта. Файл создан админкой 07.10.2026, 22:28:31 */
 window.SITE_CONTENT = {
-  "updated": "2026-10-07T15:21:59.615Z",
+  "updated": "2026-10-07T15:28:31.300Z",
   "theme": {
     "accent": "#b98cff",
     "accent2": "#ff7ac2"
@@ -136,12 +136,6 @@ window.SITE_CONTENT = {
         "url": "https://steamcommunity.com/id/sssakuta"
       },
       {
-        "type": "youtube",
-        "title": "Сериал VERITY™ на YouTube",
-        "subtitle": "канал автора ThatMob — там вышел и русский дубляж",
-        "url": "https://www.youtube.com/@ThatMob"
-      },
-      {
         "type": "telegram",
         "title": "AniCore News",
         "subtitle": "новости команды дубляжа",
@@ -152,12 +146,6 @@ window.SITE_CONTENT = {
         "title": "AniCore на вики «Верити»",
         "subtitle": "подтверждение роли: Верити озвучил Miroshke",
         "url": "https://verityminecraft.fandom.com/ru/wiki/AniCore"
-      },
-      {
-        "type": "web",
-        "title": "AniCore на вики фандабов",
-        "subtitle": "о команде и её проектах",
-        "url": "https://fandub.wiki/index.php?title=AniCore"
       },
       {
         "type": "article",
