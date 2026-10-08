@@ -1,6 +1,6 @@
-/* Содержимое сайта. Файл создан админкой 07.10.2026, 22:28:31 */
+/* Содержимое сайта. Файл создан админкой 08.10.2026, 09:41:08 */
 window.SITE_CONTENT = {
-  "updated": "2026-10-07T15:28:31.300Z",
+  "updated": "2026-10-08T02:41:08.767Z",
   "theme": {
     "accent": "#b98cff",
     "accent2": "#ff7ac2"
@@ -152,6 +152,12 @@ window.SITE_CONTENT = {
         "title": "Обо мне на Telegraph",
         "subtitle": "«официальный русский голос Верити»",
         "url": "https://telegra.ph/Miroshke--Oficialnyj-russkij-golos-Veriti-Verity-ot-komandy-AniCore-na-kanale-ThatMob-09-24"
+      },
+      {
+        "type": "web",
+        "title": "Профиль на IMDb",
+        "subtitle": "Официальная страница актёра в базе IMDb",
+        "url": "https://www.imdb.com/name/nm18990596/"
       }
     ]
   },
