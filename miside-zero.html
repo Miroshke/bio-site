@@ -8,88 +8,165 @@
   * { box-sizing: border-box; margin: 0; padding: 0; }
   body {
     font-family: 'Segoe UI', -apple-system, sans-serif;
-    background: #0d0d12;
+    background: #0a0a0f;
     color: #e8e8f0;
-    line-height: 1.6;
-    padding: 40px 20px;
+    line-height: 1.65;
     min-height: 100vh;
+    position: relative;
+    overflow-x: hidden;
   }
-  .container { max-width: 720px; margin: 0 auto; }
+  /* Декоративное свечение по бокам */
+  body::before {
+    content: '';
+    position: fixed;
+    top: -200px;
+    left: -200px;
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(102,126,234,0.15), transparent 70%);
+    pointer-events: none;
+    z-index: 0;
+  }
+  body::after {
+    content: '';
+    position: fixed;
+    bottom: -200px;
+    right: -200px;
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(240,147,251,0.12), transparent 70%);
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  .wrap {
+    position: relative;
+    z-index: 1;
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 40px 80px;
+  }
+
+  /* ====== ХЕДЕР ====== */
+  .topbar {
+    padding: 24px 0 0;
+  }
   .back {
-    display: inline-block;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
     color: #888;
     text-decoration: none;
     font-size: 14px;
-    margin-bottom: 30px;
     transition: color 0.2s;
+    padding: 8px 14px;
+    border-radius: 8px;
+    background: rgba(255,255,255,0.03);
   }
-  .back:hover { color: #fff; }
-  h1 {
-    font-size: 32px;
+  .back:hover { color: #fff; background: rgba(255,255,255,0.08); }
+
+  .hero {
+    padding: 40px 0 32px;
+    border-bottom: 1px solid #1e1e28;
+    margin-bottom: 36px;
+  }
+  .hero h1 {
+    font-size: 48px;
     font-weight: 800;
-    margin-bottom: 8px;
-    line-height: 1.2;
+    line-height: 1.1;
+    margin-bottom: 12px;
+    background: linear-gradient(135deg, #fff 0%, #b07cd8 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
   }
-  .subtitle {
+  .hero .subtitle {
     color: #888;
-    font-size: 16px;
-    margin-bottom: 40px;
+    font-size: 18px;
+    font-weight: 500;
   }
+
+  /* ====== КАРТОЧКИ ====== */
   .card {
-    background: #17171f;
+    background: #13131a;
     border-radius: 16px;
-    padding: 28px;
+    padding: 32px 36px;
     margin-bottom: 20px;
-    border: 1px solid #262633;
+    border: 1px solid #1e1e28;
+    transition: border-color 0.2s;
   }
+  .card:hover { border-color: #2a2a3a; }
   .card h2 {
-    font-size: 20px;
-    margin-bottom: 16px;
+    font-size: 22px;
+    margin-bottom: 18px;
     color: #fff;
+    font-weight: 700;
   }
-  .card p { color: #b8b8c8; font-size: 15px; margin-bottom: 10px; }
-  .card ul { list-style: none; padding-left: 0; }
-  .card li {
-    padding: 8px 0 8px 28px;
-    position: relative;
-    font-size: 15px;
+  .card p {
     color: #b8b8c8;
+    font-size: 16px;
+    margin-bottom: 12px;
+  }
+  .card p:last-child { margin-bottom: 0; }
+
+  /* ====== СПИСКИ ====== */
+  .card ul {
+    list-style: none;
+    padding-left: 0;
+  }
+  .card li {
+    padding: 10px 0 10px 32px;
+    position: relative;
+    font-size: 16px;
+    color: #b8b8c8;
+    line-height: 1.6;
   }
   .card li::before {
     content: '✓';
     position: absolute;
     left: 0;
+    top: 11px;
     color: #4CAF50;
     font-weight: bold;
+    font-size: 16px;
   }
+
+  /* ====== СТАТИСТИКА ====== */
   .stat-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 14px;
-    margin-top: 8px;
+    gap: 16px;
+    margin: 16px 0 4px;
   }
   .stat {
-    background: #1e1e28;
-    padding: 20px;
-    border-radius: 12px;
+    background: #1a1a24;
+    padding: 26px 20px;
+    border-radius: 14px;
     text-align: center;
+    border: 1px solid #262633;
   }
   .stat .num {
-    font-size: 32px;
+    font-size: 40px;
     font-weight: 800;
     color: #b07cd8;
     line-height: 1.1;
   }
   .stat .label {
-    font-size: 13px;
+    font-size: 14px;
     color: #888;
-    margin-top: 6px;
+    margin-top: 8px;
   }
+
+  /* ====== ПЕРСОНАЖ ====== */
   .char {
     display: flex;
-    align-items: center;
-    gap: 14px;
+    align-items: flex-start;
+    gap: 16px;
     margin-top: 8px;
+    padding: 18px;
+    background: #1a1a24;
+    border-radius: 12px;
+    border-left: 4px solid #E24A90;
   }
   .char-dot {
     width: 14px;
@@ -97,38 +174,106 @@
     border-radius: 50%;
     background: #E24A90;
     flex-shrink: 0;
+    margin-top: 6px;
+    box-shadow: 0 0 12px rgba(226,74,144,0.6);
   }
-  .char-info strong { color: #fff; display: block; margin-bottom: 2px; }
-  .char-info span { color: #888; font-size: 13px; }
+  .char-info strong {
+    color: #fff;
+    display: block;
+    margin-bottom: 4px;
+    font-size: 17px;
+  }
+  .char-info span {
+    color: #999;
+    font-size: 15px;
+    line-height: 1.6;
+  }
+
+  /* ====== CTA ====== */
   .cta {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    padding: 32px;
-    border-radius: 16px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+    padding: 44px 40px;
+    border-radius: 20px;
     text-align: center;
-    margin-top: 30px;
+    margin-top: 40px;
+    position: relative;
+    overflow: hidden;
   }
-  .cta h2 { color: white; margin-bottom: 10px; font-size: 22px; }
-  .cta p { color: rgba(255,255,255,0.9); font-size: 15px; margin-bottom: 6px; }
+  .cta::before {
+    content: '🎙';
+    position: absolute;
+    top: -30px;
+    right: 20px;
+    font-size: 160px;
+    opacity: 0.12;
+    transform: rotate(-15deg);
+  }
+  .cta h2 {
+    color: white;
+    margin-bottom: 12px;
+    font-size: 28px;
+    position: relative;
+    z-index: 1;
+  }
+  .cta p {
+    color: rgba(255,255,255,0.95);
+    font-size: 16px;
+    margin-bottom: 8px;
+    position: relative;
+    z-index: 1;
+  }
   .cta a {
     display: inline-block;
-    background: rgba(255,255,255,0.2);
+    background: rgba(255,255,255,0.22);
     color: white;
-    padding: 12px 28px;
-    border-radius: 10px;
+    padding: 14px 34px;
+    border-radius: 12px;
     text-decoration: none;
-    font-weight: 600;
-    margin-top: 16px;
-    transition: background 0.2s;
+    font-weight: 700;
+    font-size: 16px;
+    margin-top: 20px;
+    transition: all 0.2s;
+    position: relative;
+    z-index: 1;
+    backdrop-filter: blur(10px);
   }
-  .cta a:hover { background: rgba(255,255,255,0.3); }
+  .cta a:hover {
+    background: rgba(255,255,255,0.35);
+    transform: translateY(-2px);
+  }
+
+  /* ====== МОБИЛЬНАЯ ВЕРСИЯ ====== */
+  @media (max-width: 768px) {
+    .wrap { padding: 0 20px 60px; }
+    .hero h1 { font-size: 32px; }
+    .hero .subtitle { font-size: 15px; }
+    .hero { padding: 24px 0 24px; margin-bottom: 24px; }
+    .card { padding: 24px 22px; border-radius: 14px; }
+    .card h2 { font-size: 19px; margin-bottom: 14px; }
+    .card p { font-size: 15px; }
+    .card li { font-size: 15px; padding: 8px 0 8px 28px; }
+    .stat .num { font-size: 30px; }
+    .stat .label { font-size: 13px; }
+    .cta { padding: 32px 24px; }
+    .cta h2 { font-size: 22px; }
+    .cta p { font-size: 15px; }
+    .cta::before { font-size: 120px; }
+    .char { flex-direction: column; gap: 10px; }
+    .char-dot { margin-top: 0; }
+  }
 </style>
 </head>
 <body>
-  <div class="container">
-    <a href="index.html" class="back">← Назад на главную</a>
+  <div class="wrap">
 
-    <h1>Озвучка MiSide Zero</h1>
-    <p class="subtitle">Фанатский проект · Голос для Миты</p>
+    <div class="topbar">
+      <a href="index.html" class="back">← Назад на главную</a>
+    </div>
+
+    <div class="hero">
+      <h1>Озвучка MiSide Zero</h1>
+      <p class="subtitle">Фанатский проект · Голос для Миты</p>
+    </div>
 
     <div class="card">
       <h2>Что это за проект</h2>
@@ -159,7 +304,7 @@
           <div class="label">вечера работы</div>
         </div>
       </div>
-      <p style="margin-top: 14px; color: #888; font-size: 14px;">Можно всё за один заход, если пойдёт. Можно по частям — как удобно.</p>
+      <p style="margin-top: 16px; color: #888; font-size: 15px;">Можно всё за один заход, если пойдёт. Можно по частям — как удобно.</p>
     </div>
 
     <div class="card">
@@ -176,11 +321,11 @@
     <div class="card">
       <h2>Как записывать</h2>
       <ul>
-        <li>Тихая комната — закрой окно, выключи технику</li>
+        <li>Тихая комната — закрой окно, выключи технику, что шумит</li>
         <li>Микрофон на 15-20 см от рта</li>
-        <li>Наушники — чтобы не ловить звук из колонок</li>
-        <li>Пики не выше -6 дБ</li>
-        <li>Оговорилась — перезапиши, не страшно</li>
+        <li>Наушники — чтобы запись не ловила звук из колонок</li>
+        <li>Пики не выше -6 дБ, не в красной зоне</li>
+        <li>Оговорилась — просто перезапиши, не страшно</li>
       </ul>
     </div>
 
@@ -188,7 +333,9 @@
       <h2>Если интересно</h2>
       <p>Напиши мне в Telegram — скину полный пакет и покажу, как всё устроено.</p>
       <p>Совсем без давления, просто попробуем 🙂</p>
+      <a href="https://t.me/ТВОЙ_НИК">Написать в Telegram</a>
     </div>
+
   </div>
 </body>
 </html>
