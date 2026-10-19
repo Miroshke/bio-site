@@ -1,6 +1,6 @@
-/* Содержимое сайта. Файл создан админкой 08.10.2026, 09:41:08 */
+/* Содержимое сайта. Файл создан админкой 19.10.2026, 18:30:19 */
 window.SITE_CONTENT = {
-  "updated": "2026-10-08T02:41:08.767Z",
+  "updated": "2026-10-19T11:30:19.194Z",
   "theme": {
     "accent": "#b98cff",
     "accent2": "#ff7ac2"
@@ -27,6 +27,11 @@ window.SITE_CONTENT = {
       {
         "label": "Заказать озвучку",
         "url": "https://t.me/sssakutaaa",
+        "primary": false
+      },
+      {
+        "label": "Пожертвование",
+        "url": "https://dalink.to/miroshke",
         "primary": false
       }
     ]
