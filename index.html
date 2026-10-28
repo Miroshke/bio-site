@@ -280,6 +280,10 @@ footer { padding:24px 0; }
 @media(max-width:420px) { body { padding:14px 18px; } .head { flex-wrap:nowrap; gap:14px; } .head > div:last-child { flex-basis:auto; } .avatar { width:64px; height:64px; } h1 { font-size:30px; } .badge { font-size:11px; padding:5px 9px; } .handle { font-size:12px; } .status { font-size:12px; } .grid { gap:8px 16px; } .item { padding:14px 0; } .item span { font-size:13px; } #contacts .links { grid-template-columns:1fr; } #demo .demo { padding:18px; } .work { padding:20px; } }
 
 .works > *, .links > *, .work > *, .link > * { min-width:0; max-width:100%; } .work .role { flex-basis:auto; align-self:stretch; } .link .t strong { overflow-wrap:anywhere; }
+
+.avatar { width:124px; height:124px; }
+@media(max-width:760px) { .avatar { width:96px; height:96px; } }
+@media(max-width:420px) { .avatar { width:80px; height:80px; } }
 </style>
 </head>
 <body>
@@ -326,6 +330,7 @@ function merge(base, over) {
   var out = Array.isArray(base) ? base.slice() : Object.assign({}, base);
   if (!isObj(over)) return out;
   Object.keys(over).forEach(function (k) {
+    if (k === "__proto__" || k === "constructor" || k === "prototype") return;
     if (isObj(base[k]) && isObj(over[k])) out[k] = merge(base[k], over[k]);
     else if (over[k] !== undefined && over[k] !== null) out[k] = over[k];
   });
@@ -378,7 +383,13 @@ function el(tag, props, kids) {
 }
 
 function list(arr) { return Array.isArray(arr) ? arr : []; }
-function safeUrl(u) { u = String(u || "").trim(); return u; }
+function safeUrl(u) {
+ u=String(u || '').trim();
+ if (!u || /[\u0000-\u0020\u007f]/.test(u)) return '#';
+ if (/^(?:javascript|data|vbscript|file|blob):/i.test(u) || /^\/\//.test(u)) return '#';
+ try { var parsed=new URL(u,location.href); if(!/^(https?:|mailto:|tel:)$/.test(parsed.protocol) && !(location.protocol==='file:' && parsed.protocol==='file:' && !/^[a-z][a-z0-9+.-]*:/i.test(u))) return '#'; } catch(e) { return '#'; }
+ return u;
+}
 
 /* ---------- Отрисовка сайта ---------- */
 function render(raw) {
@@ -411,7 +422,7 @@ function render(raw) {
   /* --- Шапка --- */
   var avatar;
   if (C.header.avatarImage) {
-    avatar = el("div", { class: "avatar" }, [el("img", { src: C.header.avatarImage, alt: "" })]);
+    avatar = el("div", { class: "avatar" }, [el("img", { src: safeUrl(C.header.avatarImage), alt: "" })]);
   } else {
     avatar = el("div", { class: "avatar", "aria-hidden": "true", text: C.header.avatarText || "?" });
   }
@@ -452,7 +463,7 @@ function render(raw) {
     var files = el("div", { class: "files" }, tracks.map(function (t) {
       return el("div", null, [
         el("p", { text: t.name || t.file }),
-        el("audio", { controls: "", preload: "none", src: t.file })
+        el("audio", { controls: "", preload: "none", src: safeUrl(t.file) })
       ]);
     }));
 
@@ -597,6 +608,8 @@ if (/[?&]preview=1/.test(location.search)) {
 }
 
 window.addEventListener("message", function (e) {
+  if (!/[?&]preview=1/.test(location.search) || window.parent === window || e.source !== window.parent) return;
+  if (location.protocol !== "file:" && e.origin !== location.origin) return;
   var d = e.data;
   if (d && d.type === "bio-preview" && d.content) render(d.content);
 });
