@@ -8,7 +8,7 @@ window.SITE_CONTENT = {
   "seo": {
     "title": "Мирошке(Miroshke) — официальный русский голос Верити (Verity) · актёр дубляжа",
     "description": "Мирошке (Miroshke) — актёр дубляжа и озвучки, официальный русский голос Верити из сериала VERITY™ от ThatMob, участник команды AniCore. Демо, услуги и контакты.",
-    "previewImage": "https://miroshke.github.io/bio-site/avatar.jpg"
+    "previewImage": "https://miroshke.github.io/avatar.jpg"
   },
   "header": {
     "name": "Мирошке",
